@@ -24,8 +24,6 @@
 }
 body {
   font-family: "Inter", sans-serif;
-  /* open sans */
-  /* font-family: "Open Sans", sans-serif; */
 }
 .inverted-logo {
   filter: invert(100%);
@@ -137,9 +135,8 @@ header .navigate-slash {
   border-bottom: 2px solid var(--primary);
   transition: 0.15s all ease;
 }
-.search-cart {
-}
-.search-cart div {
+
+/* .search-cart div {
   margin-right: 25px;
 }
 .search-cart input {
@@ -151,7 +148,7 @@ header .navigate-slash {
   padding: 5px 2px;
   padding-right: 10px;
   outline: none;
-}
+} */
 /* the banner styles */
 .slash-banner {
   margin: 20px 0 0;
@@ -161,9 +158,6 @@ header .navigate-slash {
 .slash-sub-banner {
   max-width: 1200px;
   margin: 0px auto;
-}
-.slash-banner-mobile {
-  display: none;
 }
 .slash-banner h1 {
   font-weight: 800;
@@ -198,10 +192,7 @@ header .navigate-slash {
   cursor: pointer;
   padding: 50px 10px;
 }
-.sellers-all {
-}
-.image-grid {
-}
+
 .image-grid .sellers-1-image {
   width: 400px;
   padding: 0;
@@ -454,8 +445,6 @@ header .navigate-slash {
   margin-right: 16px;
 }
 
-/* the tablet view of the webpage */
-
 /* the mobile view of the webpage */
 
 @media screen and (max-width: 450px) {
@@ -465,6 +454,8 @@ header .navigate-slash {
   }
   #header-nav-mobile {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: #fff;
     display: block;
@@ -476,6 +467,10 @@ header .navigate-slash {
     background-color: #0000006b;
     margin-right: 50px;
     border-color: #0000006b;
+  }
+  .nav-lists-slash ul {
+    padding-top: 10px;
+    padding-bottom: 40px;
   }
   .nav-lists-slash ul li {
     padding: 15px 0px;
@@ -489,24 +484,158 @@ header .navigate-slash {
   /* the mobile navigation template styles */
   /* welcome page banner responsive designs */
   .slash-banner {
-    border: 1px solid red;
-    padding-top: 30px;
+    margin: 20px 0 0;
+    padding: 20px 10%;
+    background: var(--offwhite);
   }
-  .slash-banner-mobile {
-    border: 1px solid blue;
-    display: block;
-  }
-  .slash-sub-banner-mobile {
-    max-width: 370px;
+  .slash-sub-banner {
+    max-width: 360px;
     margin: 0px auto;
-    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .slash-banner h1 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.6;
+  }
+  .text-slash p {
+    font-size: 14px;
+    color: var(--muted-text-color);
+  }
+  .sellers-sect p {
+    color: #808080;
+  }
+  .image-slashes {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* margin: 0 0 0 auto; */
+    cursor: pointer;
+    border-radius: 250px;
+  }
+  .image-slashes img {
+    width: 400px;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px 0 0;
+    margin-bottom: 100px;
+  }
+  .btn-container a {
+    font-size: 14px;
+    margin-right: 0px;
+  }
+  .link-btn {
+    padding: 7px 10px;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    color: #151516;
+  }
+  .link-btn:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+  .filled {
+    background: var(--primary);
+    color: #fff;
+  }
+  .filled:hover {
+    background: transparent;
+    color: #1b1b1b;
+  }
+  .link-btn-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    color: #151516;
+    gap: 10px;
+  }
+  .link-btn-icon:hover {
+    color: #fff;
+    background: var(--primary);
+    color: #fff;
+    gap: 20px;
+    transition: 0.3s all ease-in-out;
   }
   /* first and second banner responsive design */
   .banner-lists {
-    display: none;
+    padding: 40px 0px;
   }
-  .banner-lists-mobile {
-    display: block;
+  .slashes-lists {
+    cursor: pointer;
+    padding: 50px 10px;
+  }
+  .sellers-all {
+    gap: 10px;
+    max-width: 320px;
+    margin: 0px auto;
+  }
+  .image-grid .sellers-1-image {
+    width: 100%;
+    padding: 0;
+    border-radius: 20px;
+  }
+  .sellers-1-image img {
+    border-radius: 20px;
+    width: 100%;
+  }
+  .sellers-2-image {
+    width: 100%;
+    padding: 0;
+    border-radius: 20px;
+    margin: 0 0 0 auto;
+  }
+  .sellers-2-image img {
+    width: 100%;
+    padding: 0;
+    border-radius: 20px;
+  }
+  /* the get started class */
+  .get-started {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+    background: var(--offwhite);
+    z-index: -1;
+  }
+  .get-started .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0px;
+    gap: 20px;
+  }
+  .get-started .card-container .card-item {
+    background: #fff;
+    padding: 20px 30px;
+    box-shadow: var(--box-shadow);
+    width: 80%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 7px;
+  }
+  .get-started .card-container .card-item:hover {
+    transform: scale(1.01);
+  }
+  .card-item:hover .steps {
+    border: 1px solid var(--primary);
+  }
+  .get-started .steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--primary-light);
+    border-radius: 20px;
   }
   /* service and about page responsive designs */
   /* service */
@@ -516,31 +645,31 @@ header .navigate-slash {
 
   /* about and contact us */
   .about-contact-slash {
-    max-width: 390px;
+    max-width: 300px;
     margin: 0px auto;
+    padding: 30px 0px;
+  }
+  .about-info {
+    margin: 0;
   }
   .contact-slash {
+    padding: 20px 0px;
   }
-  .contact-slash .username.input-container {
+  .contact-slash form {
+    margin: 0 0 0 auto;
+  }
+  .contact-slash .input-container {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    margin: 0 0 10px;
   }
   .contact-slash #name,
   .contact-slash #email {
     width: 100%;
-  }
-  .first-area {
-    display: none;
-  }
-  .second-area {
-    display: block;
-  }
-  .contact-slash input {
-    margin: 20px 0px;
-  }
-  #email {
-    margin-bottom: 15px;
+    font-size: 13px;
+    padding: 10px 24px;
+    padding-right: 5px;
+    border-radius: 20px;
   }
   /* footer responsive designs */
   .mainFooter {
@@ -612,6 +741,32 @@ header .navigate-slash {
   }
 }
 /* the mini mobile width */
-/* @media screen and (max-width: 360px) {
-    
-} */
+@media screen and (max-width: 360px) {
+  .about-contact-slash {
+    max-width: 300px;
+    margin: 0px auto;
+    padding: 30px 0px;
+  }
+  .about-info {
+    margin: 0;
+  }
+  .contact-slash {
+    padding: 20px 0px;
+  }
+  .contact-slash form {
+    margin: 0px auto;
+  }
+  .contact-slash .input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+  }
+  .contact-slash #name,
+  .contact-slash #email {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 4px;
+    padding-right: 0px;
+    border-radius: 20px;
+  }
+}
